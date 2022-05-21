@@ -11,7 +11,7 @@ public class Arbitre
 	public String getNom(){			return Nom;}
 	public String getPrenom(){		return Prenom;}
 	public int getAnneeExperience(){return AnneeExperience;}
-	
+	  
 	
 	//Propriete set pour attribuer et modifie les valeurs des attributs
 	public void setId(int id){ 					IdArbitre = id;}
