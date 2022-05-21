@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.geometry.Insets?>
+<?xml-stylesheet href="styleCSS.css" type="text/css"?>
+
+<AnchorPane xmlns:fx="http//javafx.com/fxml">
+	<children>
+		<Label text="Selectionner une equipe" 			AnchorPane.topAnchor="15" AnchorPane.leftAnchor="20"/>
+		<ComboBox fx:id="CBEquipe" visibleRowCount="7" 	AnchorPane.topAnchor="10" AnchorPane.leftAnchor="200" />
+		
+		<TableView fx:id="TVRencontre"  prefWidth="640" prefHeight="240" AnchorPane.topAnchor="50" AnchorPane.leftAnchor="15">
+			<columns>
+				<TableColumn  fx:id="TCIdTVRencontre" text="Numero" maxWidth="70">
+					<cellValueFactory><PropertyValueFactory property="Id" />  <!--  Id est le nom des methode sans le get qui est dans l objet metier -->
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn  fx:id="TCPhase" text="Phase" maxWidth="100">
+					<cellValueFactory><PropertyValueFactory property="Phase" />
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn  fx:id="TCE1" text="Equipe 1" minWidth="90">
+					<cellValueFactory><PropertyValueFactory property="Equipe1" />
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn  fx:id="TCE2" text="Equipe 2" minWidth="90">
+					<cellValueFactory><PropertyValueFactory property="Equipe2" />
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn  fx:id="TCArbitre" text="Arbitre" minWidth="30">
+					<cellValueFactory><PropertyValueFactory property="ArbitreString" />
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn  fx:id="TCTable" text="Table" minWidth="30">
+					<cellValueFactory><PropertyValueFactory property="Table" />
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn  fx:id="TCGagnant" text="Gagnant" minWidth="90">
+					<cellValueFactory><PropertyValueFactory property="GagnantString" />
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn  fx:id="TCResultat" text="Resultat" minWidth="50">
+					<cellValueFactory><PropertyValueFactory property="Resultat" />
+					</cellValueFactory>
+				</TableColumn>
+			</columns>
+		</TableView>
+		<Button fx:id="BFermer" prefWidth="80" prefHeight="20" onAction="#BFermer" text="Fermer" AnchorPane.rightAnchor="10" AnchorPane.bottomAnchor="10"/>
+	</children>												<!--  le onAction contient une methode de la page java relative au xml -->
+</AnchorPane>

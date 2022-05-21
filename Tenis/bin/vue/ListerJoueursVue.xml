@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.cell.*?>
+<?xml-stylesheet href="styleCSS.css" type="text/css"?>
+
+<AnchorPane xmlns:fx="http//javafx.com/fxml">
+	<children>
+		<TableView fx:id="TVJoueur" prefWidth="445" prefHeight="240" AnchorPane.topAnchor="15" AnchorPane.leftAnchor="15">
+			<columns>
+				<TableColumn  fx:id="TCIdJoueur" text="Numero" minWidth="50">
+					<cellValueFactory><PropertyValueFactory property="Id" />  <!--  Id est le nom des methode sans le get qui est dans l objet metier -->
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn  fx:id="TCNom" text="Nom" minWidth="75">
+					<cellValueFactory><PropertyValueFactory property="Nom" />
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn  fx:id="TCPrenom" text="Prenom" minWidth="75">
+					<cellValueFactory><PropertyValueFactory property="Prenom" />
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn  fx:id="TCStyle" text="Style" minWidth="75">
+					<cellValueFactory><PropertyValueFactory property="StyleJeu" />
+					</cellValueFactory>
+				</TableColumn>
+			</columns>
+		</TableView>
+		<ImageView fx:id="IVImage" AnchorPane.topAnchor="55" AnchorPane.rightAnchor="15" />
+		<Button fx:id="BFermer" prefWidth="80" prefHeight="20" onAction="#BFermer" text="Fermer" AnchorPane.rightAnchor="15" AnchorPane.bottomAnchor="15"/>
+	</children>												<!--  le onAction contient une methode de la page java relative au xml -->
+</AnchorPane>

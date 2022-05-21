@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.cell.*?>
+<?xml-stylesheet href="styleCSS.css" type="text/css"?>
+
+<BorderPane xmlns:fx="http://javafx.com.fxml">
+	<top>
+		<MenuBar BorderPane.alignment="CENTER">
+			<menus>
+				<Menu text="Tournoi">
+					<items>
+						<MenuItem text="Generer tournoi" 		onAction="#MGenererTournoi"/> 
+						<MenuItem text="Lister les rencontres" 	onAction="#MListerRencontres"/> 
+						<MenuItem text="Lister les rencontres d'une equipe"	onAction="#MListerRencontresEquipe"/> 
+						<MenuItem text="Modifier une rencontre" 			onAction="#MModifierRencontre"/> 
+						<MenuItem text="Terminer le tournoi" 				onAction="#MTerminerTournoi"/> 
+					</items>
+				</Menu>
+				<Menu text="Arbitres">
+					<items>
+						<MenuItem text="Lister les arbitres" 	onAction="#MListerArbitres"/> <!-- #MListerArbitres  c est la METHODE dans la FenetrePrincipale -->
+					</items>
+				</Menu>
+				<Menu text="Tables">
+					<items>
+						<MenuItem text="Lister les tables"  	onAction="#MListerTables"/>
+					</items>
+				</Menu>
+				<Menu text="Joueurs">
+					<items>
+						<MenuItem text="Ajouter un joueur" 		onAction="#MAjouterJoueur"/>
+						<MenuItem text="Supprimer un joueur"  	onAction="#MSupprimerJoueur"/>
+						<MenuItem text="Lister les joueurs"  	onAction="#MListerJoueurs"/>
+					</items>
+				</Menu>
+				<Menu text="Equipes">
+					<items>
+						<MenuItem text="Ajouter une equipe" 	onAction="#MAjouterEquipe"/>
+						<MenuItem text="Supprimer une equipe" 	onAction="#MSupprimerEquipe"/>
+						<MenuItem text="Lister les equipes"  	onAction="#MListerEquipes"/>
+					</items>
+				</Menu>
+				<Menu text="Quitter">
+					<items>
+						<MenuItem text="Quitter le prgram" 		onAction="#MQuitter"/>
+					</items>
+				</Menu>
+			</menus>
+		</MenuBar>
+	</top>
+	<center>
+		<ImageView>
+			<image>
+				<Image url="file:img/acceuil.jpg" />
+			</image>
+		</ImageView>
+	</center>
+</BorderPane>
+
+
+

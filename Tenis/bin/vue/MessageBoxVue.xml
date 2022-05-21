@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.cell.*?>
+<?xml-stylesheet href="styleCSS.css" type="text/css"?>
+
+<AnchorPane fx:id="APZoneFenetre" xmlns:fx="http://javafx.com/fxml">
+	<children>
+		<HBox AnchorPane.topAnchor="15" AnchorPane.leftAnchor="15" spacing="20" alignment="CENTER">
+			<children>
+				<ImageView fx:id="IVImage" AnchorPane.topAnchor="25" AnchorPane.rightAnchor="15" />
+				<Label 	   fx:id="LMsgErreur" text="" />
+			</children>
+		</HBox>
+		<Button fx:id="BFermer" prefWidth="80" prefHeight="20" onAction="#BFermer" text="Fermer" AnchorPane.rightAnchor="15" AnchorPane.bottomAnchor="15" />
+	</children>												<!--  le onAction contient une methode de la page java relative au xml -->
+</AnchorPane>

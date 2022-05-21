@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+<?xml-stylesheet href="styleCSS.css" type="text/css"?>
+
+<AnchorPane xmlns:fx="http//javafx.com/fxml">
+	<children>
+		<TableView fx:id="TVTable" prefWidth="445" prefHeight="240" AnchorPane.topAnchor="15" AnchorPane.leftAnchor="15">
+			<columns>
+				<TableColumn  fx:id="TCIdTable" text="Numero" minWidth="50">
+					<cellValueFactory><PropertyValueFactory property="Id" />  <!--  Id est le nom des methode sans le get qui est dans l objet metier -->
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn  fx:id="TCPostion" text="Position" minWidth="75">
+					<cellValueFactory><PropertyValueFactory property="Position" />
+					</cellValueFactory>
+				</TableColumn>
+			</columns>
+		</TableView>
+		<Button fx:id="BFermer" prefWidth="80" prefHeight="20" onAction="#BFermer" text="Fermer" AnchorPane.rightAnchor="15" AnchorPane.bottomAnchor="15"/>
+	</children>													 <!--  le onAction contient une methode de la page java relative au xml -->
+</AnchorPane>

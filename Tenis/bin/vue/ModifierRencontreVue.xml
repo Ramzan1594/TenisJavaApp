@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.Insets?>
+<?xml-stylesheet href="styleCSS.css" type="text/css"?>
+
+<VBox xmlns:fx="http://javafx.com/fxml">
+	<children>
+		<HBox spacing="15">
+			<children>
+				<GridPane hgap="20" vgap="20">
+					<children>
+						<Label text="Rencontre : " GridPane.columnIndex="0" GridPane.rowIndex="0" />
+						<ComboBox fx:id="CBId" visibleRowCount="7" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+						
+						<Label text="Phase" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+						<TextField fx:id="TFPhase" GridPane.columnIndex="1"  GridPane.rowIndex="2" 	disable="true"/>
+						
+						<Label text="Equipe 1" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+						<TextField fx:id="TFEquipe1" GridPane.columnIndex="1"  GridPane.rowIndex="3" disable="true"/>
+						
+						<Label text="Equipe 2" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+						<TextField fx:id="TFEquipe2" GridPane.columnIndex="1"  GridPane.rowIndex="4" disable="true"/>
+						
+						<Label text="Arbitre" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+						<TextField fx:id="TFArbitre" GridPane.columnIndex="1"  GridPane.rowIndex="5" disable="true"/>
+						
+						<Label text="Table" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+						<TextField fx:id="TFTable" GridPane.columnIndex="1"  GridPane.rowIndex="6"	disable="true"/>
+						
+						<Label text="Resultat" GridPane.columnIndex="0" GridPane.rowIndex="7"/>
+						<TextField fx:id="TFResultat" GridPane.columnIndex="1"  GridPane.rowIndex="7" disable="true"/>	
+						
+						
+						<Label text="MODIFICATION" GridPane.columnIndex="0" GridPane.rowIndex="9"/>
+						<Label text="Gagnant" GridPane.columnIndex="0" GridPane.rowIndex="10"/>
+						<TextField fx:id="TFGagnant" GridPane.columnIndex="1"  GridPane.rowIndex="10"/>	
+						
+						<Label text="Resultat Equipe 1" GridPane.columnIndex="0" GridPane.rowIndex="11"/>
+						<TextField fx:id="TFResultE1" GridPane.columnIndex="1"  GridPane.rowIndex="11"/>		
+						
+						<Label text="Resultat Equipe 2" GridPane.columnIndex="0" GridPane.rowIndex="12"/>
+						<TextField fx:id="TFResultE2" GridPane.columnIndex="1"  GridPane.rowIndex="12"/>					
+					</children>
+				</GridPane>				
+				
+			</children>
+			
+			<VBox.margin>
+				<Insets top="15" right="15" bottom="10" left="15" />
+			</VBox.margin>
+		</HBox>
+		
+		<Separator>
+			<VBox.margin>
+				<Insets top="0" right="15" bottom="0" left="15" />
+			</VBox.margin>
+		</Separator>
+		
+		<HBox spacing="10">
+			<children>
+				<Button fx:id="BModifier" 	prefWidth="80" prefHeight="20" onAction="#BModifier" text="Modifier" />
+				<Button fx:id="BFermer"  	prefWidth="80" prefHeight="20" onAction="#BFermer"   text="Fermer" />
+			</children>
+			
+			<VBox.margin>
+				<Insets top="10" right="15" bottom="12" left="515" />
+			</VBox.margin>
+		</HBox>
+	</children>
+</VBox>

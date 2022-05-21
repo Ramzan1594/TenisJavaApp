@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.Insets?>
+<?xml-stylesheet href="styleCSS.css" type="text/css"?>
+
+<VBox xmlns:fx="http://javafx.com/fxml">
+	<children>
+		<HBox spacing="15">
+			<children>
+				<GridPane hgap="10" vgap="10">
+					<children>
+						<Label styleClass="label1" text="Nom : " GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+						<TextField fx:id="TFNom" GridPane.columnIndex="1"  GridPane.rowIndex="0"/>
+						
+						<Label styleClass="label1" text="Joueur 1 : " GridPane.columnIndex="0" GridPane.rowIndex="1" />
+						<ComboBox fx:id="CBJ1" visibleRowCount="7" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+						
+						<Label styleClass="label1" text="Joueur 2 : " GridPane.columnIndex="0" GridPane.rowIndex="2" />
+						<ComboBox fx:id="CBJ2" visibleRowCount="7" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+								
+					</children>
+				</GridPane>
+			</children>
+			
+			<VBox.margin>
+				<Insets top="15" right="15" bottom="10" left="15" />
+			</VBox.margin>
+		</HBox>
+		
+		<Separator>
+			<VBox.margin>
+				<Insets top="0" right="15" bottom="0" left="15" />
+			</VBox.margin>
+		</Separator>
+		
+		<HBox spacing="10">
+			<children>
+				<Button fx:id="BAjouter" prefWidth="80" prefHeight="20" onAction="#BAjouterEquipe" text="Ajouter" />
+				<Button fx:id="BFermer"  prefWidth="80" prefHeight="20" onAction="#BFermer"  text="Fermer" />
+			</children>
+			
+			<VBox.margin>
+				<Insets top="10" right="15" bottom="12" left="400" />
+			</VBox.margin>
+		</HBox>
+	</children>
+</VBox>

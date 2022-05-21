@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.Insets?>
+<?xml-stylesheet href="styleCSS.css" type="text/css"?>
+
+<VBox xmlns:fx="http://javafx.com/fxml">
+	<children>
+		<HBox spacing="15">
+			<children>
+				<GridPane hgap="8" vgap="8">
+					<children>
+						<Label text="Nom" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+						<TextField fx:id="TFNom" GridPane.columnIndex="1"  GridPane.rowIndex="0"/>
+						
+						<Label text="Prenom" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+						<TextField fx:id="TFPrenom" GridPane.columnIndex="1"  GridPane.rowIndex="1"/>
+						
+						<Label text="Style" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+						<ComboBox fx:id="CBStyle" GridPane.columnIndex="1" GridPane.rowIndex="2">
+							<items>
+								<FXCollections fx:factory="observableArrayList">
+									<String fx:value="Gauche" />
+									<String fx:value="Droite" />
+								</FXCollections>
+							</items>
+						</ComboBox>
+						
+						<Label text="Photo du joueur"  GridPane.columnIndex="0" GridPane.rowIndex="6" />
+						<HBox GridPane.columnIndex="0" GridPane.rowIndex="7" spacing="15">
+							<children>
+								<TextField fx:id="TFNomImage" text="aucune.jpg"  disable="true" style="-fx-opacity: 1.0"/>
+								<Button fx:id="BChargerImage" prefWidth="20" prefHeight="20" onAction="#BOuvrirFichierImage" text="" />
+							</children>
+						</HBox>
+						
+					</children>
+				</GridPane>
+				
+				<ImageView fx:id="IVImage"  GridPane.columnIndex="1" GridPane.rowIndex="3">
+					<image>
+						<Image url="file:img/joueur/aucune.jpg" />
+					</image>
+					<HBox.margin>
+						<Insets top="15" right="0" bottom="15" left="0" />
+					</HBox.margin>
+				</ImageView>
+			</children>
+			
+			<VBox.margin>
+				<Insets top="15" right="15" bottom="10" left="15" />
+			</VBox.margin>
+		</HBox>
+		
+		<Separator>
+			<VBox.margin>
+				<Insets top="0" right="15" bottom="0" left="15" />
+			</VBox.margin>
+		</Separator>
+		
+		<HBox spacing="10">
+			<children>
+				<Button fx:id="BAjouter" prefWidth="80" prefHeight="20" onAction="#BAjouterJoueur" text="Ajouter" />
+				<Button fx:id="BFermer"  prefWidth="80" prefHeight="20" onAction="#BFermer"  text="Fermer" />
+			</children>
+			
+			<VBox.margin>
+				<Insets top="10" right="15" bottom="12" left="400" />
+			</VBox.margin>
+		</HBox>
+	</children>
+</VBox>

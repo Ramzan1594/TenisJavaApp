@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.geometry.Insets?>
+<?xml-stylesheet href="styleCSS.css" type="text/css"?>
+
+<VBox xmlns:fx="http://javafx.com/fxml">
+	<HBox spacing="10" alignment="CENTER">
+		<children> 	<!--  le onAction contient une methode de la page java relative au xml -->	
+			<Button fx:id="BConfirmer" prefWidth="80" prefHeight="20" onAction="#BConfirmer"  text="Confirmer"  />
+			<Button fx:id="BFermer"	   prefWidth="80" prefHeight="20" onAction="#BFermer"     text="Fermer"	    />
+		</children>
+		
+		<VBox.margin>
+			<Insets top="30" right="15" bottom="20" left="15" />
+		</VBox.margin>		
+	</HBox>		
+</VBox>
+
+
+
+
